@@ -1,0 +1,6 @@
+--cask visual-studio-code
+--cask termius
+youtube-dl
+ffmpeg
+tree
+croc

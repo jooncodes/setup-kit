@@ -1,69 +1,94 @@
 # setup-kit
-
 setup kit for transferring to a new device
-
-- simple desktop items: custom icon for `steak` directory, other images
-- transfers favorited discord gifs (manual)
-- transfers custom discord icon (automatic)
-- transfers minecraft options (automatic)
-- transfers terminal path and aliases (manual)
-
-most of work is done in the cloud, so many of these files are non-essential :P 
-
-# manifest
-
-- [ ]  `desktop` directory
-    - [ ]  `steak` directory
-    - [ ]  `bb` img (not included)
-- [ ]  `GIFFavoriteStore.json` (discord)
-    
-    View > Developer > Toggle Developer Tools > Application > Storage > Local Storage > https://discord.com
-    
-- [ ]  `electron.icns` (discord)
-    
-    `~/Applications/Discord.app/Contents/Resources/electron.icns`
-    
-- [ ]  `options.txt` (minecraft)
-    
-    `~/Library/Application\ Support/minecraft/options.txt`
-    
-- [ ]  `.zprofile` (excluded from the script)
-- [ ]  `script.sh` (install script)
-
----
 
 # download
 
-**browsers**
-- [google chrome](https://www.google.com/chrome/)
+🍺 = homebrew ([brew.sh](https://brew.sh/))
+🔗 = linked
+🍎 = app store
+📁 = file
 
-  - [ublock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
-  - [bitwarden extension](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en)
-  - [honey](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj?hl=en-US)
+**browsers**
+- [google chrome](https://www.google.com/chrome/) (🍺)
+
+  - [ublock origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) (🔗)
+  [bitwarden extension](https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb?hl=en) (🔗)
+  - [honey](https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj?hl=en-US) (🔗)
+  - [i don't care about cookies](https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja) (🔗)
 
 **code**
-- [vs code](https://code.visualstudio.com/download)
-- [atom](https://atom.io/)
-- [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/)
-- [youtube-dl](https://youtube-dl.org/) 
-- [ffmpeg](https://www.ffmpeg.org/download.html)
-- [python](https://www.python.org/downloads/)
-- [gnupg](https://gnupg.org/download/index.html)
-- [rclone](https://rclone.org/downloads/)
+ - [vs code](https://code.visualstudio.com/download) (🍺)
+ - [termius](https://www.termius.com) (🍺 / 🍎)
+ - [youtube-dl](https://youtube-dl.org/) (🍺)
+ - [ffmpeg](https://www.ffmpeg.org/download.html) (🍺)
+ - [python](https://www.python.org/downloads/) (🍺)
+ - [tree](http://mama.indstate.edu/users/ice/tree/) (🍺)
+ - [croc](https://github.com/schollz/croc) (🍺)
+
+**security / backup / encryption**
+- [bitwarden](https://bitwarden.com/) (🍺)
+- [gnupg](https://gnupg.org/download/index.html) (🍺)
+- [rclone](https://rclone.org/downloads/) (🍺)
+- [borg](https://www.borgbackup.org) / [vorta](https://vorta.borgbase.com) (🍺)
+- [bup](https://github.com/bup/bup) (🍺)
+- [veracrypt](https://www.veracrypt.fr/code/VeraCrypt/) (🍺)
 
 **productivity**
-- [one note](https://www.onenote.com/download)
-- [zoom](https://zoom.us/download)
+- [one note](https://www.onenote.com/download) (🔗 / 🍎)
+- [zoom](https://zoom.us/download) (🍺)
 
 **gaming**
-- [steam](https://store.steampowered.com/about/)
-- [discord](https://discord.com/download)
-- [minecraft](https://www.minecraft.net/en-us)
+- [steam](https://store.steampowered.com/about/) (🍺)
+- [discord](https://discord.com/download) (🍺)
+- [minecraft](https://www.minecraft.net/en-us) (🍺)
+
+**other**
+- [`~/.config/custom-icon` - *included*] (📁)
+- [`~/Desktop/*` - *included*] (📁)
+- [`~/.zprofile` - *included*] (📁)
+- [`~/.ssh` - *not included*]
+- [`~/.vscode` - *not included*]
+- [`~/.config/rclone` - *not included*]
+- [`~/Projects` - *not included*]
+- [`GIFFavoriteStore.json` - *not included*]
+
+(records, photos, misc - *out of scope*)
 
 ---
 
-### to-do
+## brew commands
 
-- rsync/cp script for `options.txt`?
-- add minimap for code editors?
-- rclone set up possibly needed in the future
+**essential:** `essential-install.txt`
+
+| Google Chrome | brew install --cask google-chrome |
+| --- | --- |
+| Bitwarden | brew install --cask bitwarden |
+| Zoom | brew install --cask zoom |
+
+**security / backup / encryption:** `security-install.txt`
+
+| borg | brew install borgbackup |
+| --- | --- |
+| bup | brew install bup |
+| gnupg | brew install gnupg |
+| rclone | brew install rclone |
+| veracrypt | brew install --cask veracrypt |
+| vorta | brew install --cask vorta |
+
+**code:** `code-install.txt`
+
+| VS Code | brew install --cask visual-studio-code |
+| --- | --- |
+| Termius | brew install --cask termius |
+| youtube-dl | brew install youtube-dl |
+| ffmpeg | brew install ffmpeg |
+| tree | brew install tree |
+| croc | brew install croc |
+| python | (with brew install) |
+
+**gaming:** `gaming-install.txt`
+
+| Discord | brew install --cask discord |
+| --- | --- |
+| Steam | brew install --cask steam |
+| Minecraft | brew install --cask minecraft |

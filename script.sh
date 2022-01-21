@@ -1,9 +1,24 @@
 #!/bin/bash
+GREEN="\e[32m"
+CYAN="\e[36m"
+RESET="\e[0m"
 
-cp electron.icns ~/Applications/Discord.app/Contents/Resources/electron.icns
-cp options.txt ~/Library/Application\ Support/minecraft/options.txt
+# Moves into the current directory of the script
+cd "$(dirname "$0")"
 
-# To update/refresh to load the icon
-touch /Applications/Discord.app
-sudo killall Finder
-sudo killall Dock
+# Add ~/.config directory if it doesnt exist & repo's config into it
+mkdir -p ~/.config
+printf "${GREEN}[~] ~/.config created${RESET}\n"
+
+cp -r .config/ ~/.config
+printf "${GREEN}[~] .config files copied${RESET}\n"
+
+# Add .zprofile
+cp .zprofile ~/.zprofile
+printf "${GREEN}[~] .zprofile file copied${RESET}\n"
+
+# Copying to ~/Desktop
+cp -r Desktop/ ~/Desktop
+printf "${GREEN}[~] Desktop files copied${RESET}\n"
+
+printf "Continue with ${CYAN}xargs brew install < PATH-TO-FILE${RESET}\n"

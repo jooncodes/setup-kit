@@ -1,0 +1,6 @@
+borgbackup
+bup
+gnupg
+rclone
+veracrypt
+vorta
