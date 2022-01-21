@@ -3,10 +3,10 @@ setup kit for transferring to a new device
 
 # download
 
-🍺 = homebrew ([brew.sh](https://brew.sh/))
-🔗 = linked
-🍎 = app store
-📁 = file
+- 🍺 = homebrew ([brew.sh](https://brew.sh/))
+- 🔗 = linked
+- 🍎 = app store
+- 📁 = file
 
 **browsers**
 - [google chrome](https://www.google.com/chrome/) (🍺)
