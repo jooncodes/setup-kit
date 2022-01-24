@@ -1,6 +1,7 @@
 borgbackup
 bup
 gnupg
+protonvpn
 rclone
 veracrypt
 vorta

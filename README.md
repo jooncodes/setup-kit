@@ -60,25 +60,29 @@ setup kit for transferring to a new device
 
 **essential:** `essential-install.txt`
 
-| Google Chrome | brew install --cask google-chrome |
+| item | homebrew command |
 | --- | --- |
+| Google Chrome | brew install --cask google-chrome |
 | Bitwarden | brew install --cask bitwarden |
 | Zoom | brew install --cask zoom |
 
 **security / backup / encryption:** `security-install.txt`
 
-| borg | brew install borgbackup |
+| item | homebrew command |
 | --- | --- |
+| borg | brew install borgbackup |
 | bup | brew install bup |
 | gnupg | brew install gnupg |
+| protonvpn | brew install --cask protonvpn |
 | rclone | brew install rclone |
 | veracrypt | brew install --cask veracrypt |
 | vorta | brew install --cask vorta |
 
 **code:** `code-install.txt`
 
-| VS Code | brew install --cask visual-studio-code |
+| item | homebrew command |
 | --- | --- |
+| VS Code | brew install --cask visual-studio-code |
 | Termius | brew install --cask termius |
 | youtube-dl | brew install youtube-dl |
 | ffmpeg | brew install ffmpeg |
@@ -88,7 +92,8 @@ setup kit for transferring to a new device
 
 **gaming:** `gaming-install.txt`
 
-| Discord | brew install --cask discord |
+| item | homebrew command |
 | --- | --- |
+| Discord | brew install --cask discord |
 | Steam | brew install --cask steam |
 | Minecraft | brew install --cask minecraft |
